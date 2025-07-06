@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Arabic-English Translation Services | Bridging Languages & Cultures</title>
+    <meta name="description" content="Expert Arabic-English translation services with certified accuracy. Legal, medical, technical, and business translations by native speakers.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c5f2d;
+            --secondary-color: #97bc62;
+            --accent-color: #d4a574;
+            --text-dark: #1a1a1a;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --background: #f8fafc;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo::before {
+            content: '🌐';
+            margin-right: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-cta:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            direction: rtl;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            background: white;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .trust-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-alt {
+            background: var(--background);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 0.3rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .about-text h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .credential-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .specializations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .specialization {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .specialization h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .specialization p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .contact-section .section-header h2,
+        .contact-section .section-header p {
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(44, 95, 45, 0.4);
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 95, 45, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            line-height: 1.7;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .arabic-text {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .services-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">ArabLing Pro</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Quote</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="arabic-text">الترجمة المهنية بين العربية والإنجليزية</div>
+                    <h1>Professional Arabic-English Translation Services</h1>
+                    <p>Bridging cultures through precise, culturally-aware translations. Native expertise in both languages with specialized knowledge across legal, medical, technical, and business domains.</p>
+                    <a href="#contact" class="hero-cta">
+                        <span>Get Your Free Quote</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-indicators">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-number">500+</div>
+                        <div class="trust-label">Projects Completed</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-number">50+</div>
+                        <div class="trust-label">Corporate Clients</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-number">99.8%</div>
+                        <div class="trust-label">Accuracy Rate</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-number">24hr</div>
+                        <div class="trust-label">Average Turnaround</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Specialized Translation Services</h2>
+                    <p>Comprehensive Arabic-English translation solutions tailored to your specific industry needs with certified quality and cultural precision.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Legal Translation</h3>
+                        <p>Certified legal document translation for contracts, court documents, certificates, and legal correspondence with guaranteed accuracy.</p>
+                        <ul class="service-features">
+                            <li>Birth & Marriage Certificates</li>
+                            <li>Legal Contracts & Agreements</li>
+                            <li>Court Documents & Judgments</li>
+                            <li>Immigration Documents</li>
+                            <li>Notarized Translations</li>
+                        </ul>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">🏥</div>
+                        <h3>Medical Translation</h3>
+                        <p>Specialized medical document translation ensuring precision in terminology and compliance with healthcare standards.</p>
+                        <ul class="service-features">
+                            <li>Medical Records & Reports</li>
+                            <li>Pharmaceutical Documentation</li>
+                            <li>Research Papers & Studies</li>
+                            <li>Patient Information Materials</li>
+                            <li>Clinical Trial Documentation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">💼</div>
+                        <h3>Business Translation</h3>
+                        <p>Professional business document translation for companies expanding between Arabic and English markets.</p>
+                        <ul class="service-features">
+                            <li>Corporate Communications</li>
+                            <li>Financial Reports & Statements</li>
+                            <li>Marketing Materials</li>
+                            <li>Business Proposals</li>
+                            <li>Employee Handbooks</li>
+                        </ul>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">🔧</div>
+                        <h3>Technical Translation</h3>
+                        <p>Precise technical documentation translation for engineering, IT, and specialized industrial applications.</p>
+                        <ul class="service-features">
+                            <li>Technical Manuals & Guides</li>
+                            <li>Software Documentation</li>
+                            <li>Engineering Specifications</li>
+                            <li>Safety Procedures</li>
+                            <li>Product Catalogs</li>
+                        </ul>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">🎓</div>
+                        <h3>Academic Translation</h3>
+                        <p>Scholarly and educational document translation maintaining academic integrity and specialized terminology.</p>
+                        <ul class="service-features">
+                            <li>Research Papers & Theses</li>
+                            <li>Educational Materials</li>
+                            <li>Academic Transcripts</li>
+                            <li>Conference Presentations</li>
+                            <li>Scientific Publications</li>
+                        </ul>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">🌐</div>
+                        <h3>Website Localization</h3>
+                        <p>Complete website translation and cultural adaptation for Arabic and English-speaking markets.</p>
+                        <ul class="service-features">
+                            <li>Website Content Translation</li>
+                            <li>E-commerce Platforms</li>
+                            <li>Mobile App Localization</li>
+                            <li>SEO-Optimized Content</li>
+                            <li>Cultural Adaptation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Our Translation Services?</h2>
+                    <p>Professional expertise backed by years of experience and deep cultural understanding of both Arabic and English languages.</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Native Bilingual Expertise</h3>
+                        <p>As a native speaker of both Arabic and English, I bring authentic cultural understanding and linguistic precision to every translation project. My deep knowledge of both languages ensures that your message resonates perfectly with your target audience.</p>
+                        
+                        <h3>Specialized Industry Knowledge</h3>
+                        <p>Years of experience across multiple industries have given me specialized knowledge in legal, medical, technical, and business terminology. This expertise ensures accurate, contextually appropriate translations that meet industry standards.</p>
+                        
+                        <div class="credentials">
+                            <span class="credential-badge">Certified Translator</span>
+                            <span class="credential-badge">10+ Years Experience</span>
+                            <span class="credential-badge">Native Arabic Speaker</span>
+                            <span class="credential-badge">Native English Speaker</span>
+                            <span class="credential-badge">ISO 9001 Certified</span>
+                        </div>
+                    </div>
+                    <div class="specializations">
+                        <div class="specialization">
+                            <h4>Cultural Sensitivity</h4>
+                            <p>Understanding cultural nuances and context to ensure your message is culturally appropriate and effective.</p>
+                        </div>
+                        <div class="specialization">
+                            <h4>Quality Assurance</h4>
+                            <p>Rigorous quality control process including multiple reviews and proofreading for error-free translations.</p>
+                        </div>
+                        <div class="specialization">
+                            <h4>Confidentiality</h4>
+                            <p>Strict confidentiality protocols and NDAs to protect your sensitive information and documents.</p>
+                        </div>
+                        <div class="specialization">
+                            <h4>Fast Turnaround</h4>
+                            <p>Efficient workflow management to deliver high-quality translations within your deadlines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Translation Process</h2>
+                    <p>A streamlined, professional approach ensuring accuracy, quality, and timely delivery for every project.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <h3>Project Analysis</h3>
+                        <p>We analyze your document, determine complexity, and provide a detailed quote with timeline and specific requirements.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">2</div>
+                        <h3>Translation</h3>
+                        <p>Expert translation focusing on accuracy, cultural appropriateness, and maintaining the original tone and intent.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">3</div>
+                        <h3>Quality Review</h3>
+                        <p>Comprehensive review and proofreading to ensure linguistic accuracy, consistency, and cultural appropriateness.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">4</div>
+                        <h3>Delivery</h3>
+                        <p>Final delivery in your preferred format with quality assurance certificate and revision support if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get Your Professional Translation Quote</h2>
+                    <p>Ready to bridge languages and cultures? Contact us for a free, detailed quote tailored to your specific needs.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@arablingpro.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+966 (0) 12 345 6789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Medina, Saudi Arabia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Within 2 hours during business hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="direction">Translation Direction *</label>
+                            <select id="direction" name="direction" required>
+                                <option value="">Select translation direction</option>
+                                <option value="ar-en">Arabic to English</option>
+                                <option value="en-ar">English to Arabic</option>
+                                <option value="both">Both directions (multiple documents)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Type *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select service type</option>
+                                <option value="legal">Legal Translation</option>
+                                <option value="medical">Medical Translation</option>
+                                <option value="business">Business Translation</option>
+                                <option value="technical">Technical Translation</option>
+                                <option value="academic">Academic Translation</option>
+                                <option value="website">Website Localization</option>
+                                <option value="certified">Certified Translation</option>
+                                <option value="other">Other (please specify)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="wordcount">Estimated Word Count</label>
+                                <select id="wordcount" name="wordcount">
+                                    <option value="">Select word count</option>
+                                    <option value="0-500">0-500 words</option>
+                                    <option value="500-1000">500-1,000 words</option>
+                                    <option value="1000-2500">1,000-2,500 words</option>
+                                    <option value="2500-5000">2,500-5,000 words</option>
+                                    <option value="5000+">5,000+ words</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="deadline">Required Deadline</label>
+                                <input type="date" id="deadline" name="deadline">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" placeholder="Please provide details about your translation project including:
+• Type of document(s)
+• Subject matter or industry
+• Any specific requirements
+• Certification needs
+• Special formatting requirements
+• Additional context that might be helpful" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required>
+                                I agree to the <a href="#" style="color: var(--primary-color);">Terms of Service</a> and <a href="#" style="color: var(--primary-color);">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Quote Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ArabLing Pro</h3>
+                    <p>Professional Arabic-English translation services bridging cultures and languages with precision and expertise.</p>
+                    <p style="margin-top: 1rem; font-family: 'Amiri', serif; direction: rtl;">خدمات الترجمة المهنية بين العربية والإنجليزية</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <p><a href="#services">Legal Translation</a></p>
+                    <p><a href="#services">Medical Translation</a></p>
+                    <p><a href="#services">Business Translation</a></p>
+                    <p><a href="#services">Technical Translation</a></p>
+                    <p><a href="#services">Academic Translation</a></p>
+                    <p><a href="#services">Website Localization</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>📧 info@arablingpro.com</p>
+                    <p>📞 +966 (0) 12 345 6789</p>
+                    <p>📍 Medina, Saudi Arabia</p>
+                    <p>🕐 Available 24/7 for urgent projects</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quality Assurance</h3>
+                    <p>✓ Native Speaker Accuracy</p>
+                    <p>✓ Cultural Sensitivity</p>
+                    <p>✓ Industry Expertise</p>
+                    <p>✓ Confidentiality Guaranteed</p>
+                    <p>✓ Fast Turnaround</p>
+                    <p>✓ Competitive Pricing</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArabLing Pro. All rights reserved. | Professional Arabic-English Translation Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Create a summary of the request
+            const direction = formData.get('direction');
+            const service = formData.get('service');
+            const wordcount = formData.get('wordcount');
+            const deadline = formData.get('deadline');
+            
+            let summary = `Thank you for your translation request!\n\nRequest Summary:\n`;
+            summary += `• Direction: ${direction}\n`;
+            summary += `• Service: ${service}\n`;
+            if (wordcount) summary += `• Word Count: ${wordcount}\n`;
+            if (deadline) summary += `• Deadline: ${deadline}\n`;
+            summary += `\nWe will review your request and send you a detailed quote within 2 hours during business hours. For urgent projects, please call us directly.\n\nThank you for choosing ArabLing Pro!`;
+            
+            alert(summary);
+            
+            // Reset form
+            form.reset();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add mobile menu toggle (simple version)
+        const navLinks = document.querySelector('.nav-links');
+        const navToggle = document.createElement('button');
+        navToggle.innerHTML = '☰';
+        navToggle.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer
+            color: var(--primary-color);
+        `;
+        
+        document.querySelector('nav').appendChild(navToggle);
+        
+        navToggle.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Show mobile menu button on small screens
+        function handleResize() {
+            if (window.innerWidth <= 768) {
+                navToggle.style.display = 'block';
+                navLinks.style.display = 'none';
+            } else {
+                navToggle.style.display = 'none';
+                navLinks.style.display = 'flex';
+            }
+        }
+        
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial call
+
+        // Auto-fill today's date for deadline minimum
+        document.getElementById('deadline').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
