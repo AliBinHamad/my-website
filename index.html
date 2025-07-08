@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modar Translation - Login</title>
+    <title>Modar Translation - Professional Translation Services</title>
     <style>
         * {
             margin: 0;
@@ -13,54 +13,108 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            position: relative;
-            overflow: hidden;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
         }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="rgba(255,255,255,0.05)"><circle cx="200" cy="200" r="100"/><circle cx="800" cy="300" r="150"/><circle cx="400" cy="800" r="120"/><circle cx="900" cy="700" r="80"/></svg>');
-            background-size: cover;
-            animation: float 20s ease-in-out infinite;
+        [dir="rtl"] {
+            font-family: 'Tahoma', 'Arial', sans-serif;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .auth-container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            width: 100%;
-            max-width: 450px;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .auth-header {
+        /* Header */
+        header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .auth-header::before {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #1e3c72;
+            border-color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 8rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -71,80 +125,247 @@
             background-size: cover;
         }
 
-        .logo {
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 2;
+            animation: fadeInUp 1s ease;
         }
 
-        .auth-subtitle {
-            opacity: 0.9;
-            font-size: 1rem;
-            position: relative;
-            z-index: 2;
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.2s both;
         }
 
-        .auth-tabs {
-            display: flex;
-            background: rgba(0, 0, 0, 0.1);
-            margin: 0 -2rem -2rem -2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .auth-tab {
-            flex: 1;
-            padding: 1rem;
-            text-align: center;
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 600;
-            border: none;
-            background: transparent;
-            color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease 0.4s both;
         }
 
-        .auth-tab.active {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
         }
 
-        .auth-tab:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+        /* Services Section */
+        .services {
+            padding: 8rem 0;
+            background: white;
         }
 
-        .auth-content {
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 4rem;
+            color: #1e3c72;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
             padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
         }
 
-        .auth-form {
-            display: none;
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
-        .auth-form.active {
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
             display: block;
-            animation: slideIn 0.3s ease;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 0;
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        [dir="rtl"] .contact-icon {
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
             margin-bottom: 1.5rem;
-            position: relative;
         }
 
         .form-group label {
@@ -152,469 +373,355 @@
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: #333;
-            font-size: 0.9rem;
         }
 
         .form-group input,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 1rem 1rem 1rem 3rem;
+            padding: 1rem;
             border: 2px solid #e9ecef;
-            border-radius: 12px;
+            border-radius: 10px;
             font-size: 1rem;
             transition: all 0.3s ease;
             font-family: inherit;
-            background: white;
         }
 
         .form-group input:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: #667eea;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .form-icon {
-            position: absolute;
-            left: 1rem;
-            top: 2.2rem;
-            color: #666;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .form-group input:focus + .form-icon {
-            color: #667eea;
-        }
-
-        .password-toggle {
-            position: absolute;
-            right: 1rem;
-            top: 2.2rem;
-            cursor: pointer;
-            color: #666;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .password-toggle:hover {
-            color: #667eea;
-        }
-
-        .remember-forgot {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        .remember-me {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .remember-me input[type="checkbox"] {
-            width: auto;
-            margin: 0;
-            accent-color: #667eea;
-        }
-
-        .forgot-password {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .forgot-password:hover {
-            color: #5a67d8;
-            text-decoration: underline;
         }
 
         .submit-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.2rem 2rem;
+            padding: 1.2rem 2.5rem;
             border: none;
-            border-radius: 12px;
+            border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .submit-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .submit-btn:hover::before {
-            left: 100%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
         }
 
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .divider {
-            text-align: center;
-            margin: 2rem 0;
-            position: relative;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .divider::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: #e9ecef;
-        }
-
-        .divider span {
-            background: white;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .social-login {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-btn {
-            flex: 1;
-            padding: 0.8rem;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .google-btn {
-            color: #db4437;
-        }
-
-        .google-btn:hover {
-            border-color: #db4437;
-            color: #db4437;
-        }
-
-        .facebook-btn {
-            color: #4267B2;
-        }
-
-        .facebook-btn:hover {
-            border-color: #4267B2;
-            color: #4267B2;
-        }
-
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 1rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid #c3e6cb;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 1rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid #f5c6cb;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .back-to-site {
-            position: absolute;
-            top: 2rem;
-            left: 2rem;
+        /* Footer */
+        footer {
+            background: #1e3c72;
             color: white;
-            text-decoration: none;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #fff;
             font-weight: 600;
-            padding: 0.5rem 1rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            z-index: 1000;
         }
 
-        .back-to-site:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
         }
 
-        .language-switcher {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            display: flex;
-            gap: 0.5rem;
-            z-index: 1000;
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: #ccc;
         }
 
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
-        .lang-btn.active {
-            background: white;
-            color: #667eea;
-            border-color: white;
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         /* RTL Styles */
-        [dir="rtl"] {
-            font-family: 'Tahoma', 'Arial', sans-serif;
-        }
-
-        [dir="rtl"] .form-group input,
-        [dir="rtl"] .form-group select {
-            padding: 1rem 3rem 1rem 1rem;
-        }
-
-        [dir="rtl"] .form-icon {
-            left: auto;
-            right: 1rem;
-        }
-
-        [dir="rtl"] .password-toggle {
-            right: auto;
-            left: 1rem;
+        [dir="rtl"] .nav-links {
+            flex-direction: row-reverse;
         }
 
         [dir="rtl"] .language-switcher {
-            right: auto;
-            left: 2rem;
+            flex-direction: row-reverse;
         }
 
-        [dir="rtl"] .back-to-site {
-            left: auto;
-            right: 2rem;
+        [dir="rtl"] .contact-container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        [dir="rtl"] .about-content {
+            grid-template-columns: 1fr 1fr;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .auth-container {
-                margin: 1rem;
-                border-radius: 20px;
+            .nav-links {
+                display: none;
             }
 
-            .auth-header {
-                padding: 1.5rem;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            .auth-content {
-                padding: 1.5rem;
+            .hero p {
+                font-size: 1.1rem;
             }
 
-            .logo {
-                font-size: 1.8rem;
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            .back-to-site,
-            .language-switcher {
-                top: 1rem;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
-            .social-login {
-                flex-direction: column;
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            background: white;
+            color: #333;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
             }
         }
     </style>
 </head>
 <body>
-    <a href="#" class="back-to-site" data-en="← Back to Site" data-ar="← العودة للموقع">← Back to Site</a>
-    
-    <div class="language-switcher">
-        <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-        <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
-    </div>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo" data-en="Modar Translation" data-ar="مدار للترجمة">Modar Translation</a>
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+                <li><a href="#about" data-en="About" data-ar="عن الشركة">About</a></li>
+                <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
+            </div>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
 
-    <div class="auth-container">
-        <div class="auth-header">
-            <div class="logo" data-en="Modar Translation" data-ar="مدار للترجمة">Modar Translation</div>
-            <p class="auth-subtitle" data-en="Professional Translation Services" data-ar="خدمات ترجمة احترافية">Professional Translation Services</p>
-            
-            <div class="auth-tabs">
-                <button class="auth-tab active" onclick="switchTab('login')" data-en="Login" data-ar="تسجيل الدخول">Login</button>
-                <button class="auth-tab" onclick="switchTab('register')" data-en="Register" data-ar="إنشاء حساب">Register</button>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-en="Professional Translation Services in Yanbu" data-ar="خدمات ترجمة احترافية في ينبع">Professional Translation Services in Yanbu</h1>
+                    <p data-en="Breaking language barriers with precision and cultural sensitivity - Serving Yanbu and the Western Region of Saudi Arabia" data-ar="كسر حواجز اللغة بدقة وحساسية ثقافية - نخدم ينبع والمنطقة الغربية في المملكة العربية السعودية">Breaking language barriers with precision and cultural sensitivity - Serving Yanbu and the Western Region of Saudi Arabia</p>
+                    <button class="cta-button" onclick="scrollToSection('contact')" data-en="Get Started Today" data-ar="ابدأ اليوم">Get Started Today</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3 data-en="Document Translation" data-ar="ترجمة الوثائق">Document Translation</h3>
+                        <p data-en="Accurate translation of legal, medical, technical, and business documents with certified authentication" data-ar="ترجمة دقيقة للوثائق القانونية والطبية والتقنية والتجارية مع التصديق المعتمد">Accurate translation of legal, medical, technical, and business documents with certified authentication</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎤</div>
+                        <h3 data-en="Interpretation Services" data-ar="خدمات الترجمة الفورية">Interpretation Services</h3>
+                        <p data-en="Professional simultaneous and consecutive interpretation for meetings, conferences, and business events" data-ar="ترجمة فورية ومتتالية احترافية للاجتماعات والمؤتمرات والفعاليات التجارية">Professional simultaneous and consecutive interpretation for meetings, conferences, and business events</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3 data-en="Website Localization" data-ar="توطين المواقع الإلكترونية">Website Localization</h3>
+                        <p data-en="Complete website translation and cultural adaptation for global markets and local audiences" data-ar="ترجمة المواقع الإلكترونية والتكيف الثقافي الكامل للأسواق العالمية والجماهير المحلية">Complete website translation and cultural adaptation for global markets and local audiences</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3 data-en="Mobile App Translation" data-ar="ترجمة التطبيقات">Mobile App Translation</h3>
+                        <p data-en="Localization of mobile applications with user interface and content adaptation for different cultures" data-ar="توطين التطبيقات المحمولة مع تكييف واجهة المستخدم والمحتوى للثقافات المختلفة">Localization of mobile applications with user interface and content adaptation for different cultures</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 data-en="Why Choose Modar Translation?" data-ar="لماذا تختار مدار للترجمة؟">Why Choose Modar Translation?</h2>
+                        <p data-en="With over 15 years of experience in the translation industry, Modar Translation provides top-quality linguistic services to clients in Yanbu and across Saudi Arabia." data-ar="مع أكثر من 15 عامًا من الخبرة في صناعة الترجمة، تقدم مدار للترجمة خدمات لغوية عالية الجودة للعملاء في ينبع وجميع أنحاء المملكة العربية السعودية.">With over 15 years of experience in the translation industry, Modar Translation provides top-quality linguistic services to clients in Yanbu and across Saudi Arabia.</p>
+                        <p data-en="Our team of certified translators and native speakers ensures accuracy and cultural relevance in every project, with deep local expertise in the Western Region." data-ar="فريقنا من المترجمين المعتمدين والمتحدثين الأصليين يضمن الدقة والصلة الثقافية في كل مشروع، مع خبرة محلية عميقة في المنطقة الغربية.">Our team of certified translators and native speakers ensures accuracy and cultural relevance in every project, with deep local expertise in the Western Region.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label" data-en="Projects Completed" data-ar="مشروع مكتمل">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label" data-en="Languages Supported" data-ar="لغة مدعومة">Languages Supported</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">99%</div>
+                            <div class="stat-label" data-en="Client Satisfaction" data-ar="رضا العملاء">Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label" data-en="Support Available" data-ar="دعم متاح">Support Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong data-en="Email:" data-ar="البريد الإلكتروني:">Email:</strong><br>
+                                AlihamadAlahmadi@gmail.com
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong><br>
+                                +966555609260
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong data-en="Location:" data-ar="الموقع:">Location:</strong><br>
+                                <span data-en="Yanbu, Saudi Arabia" data-ar="ينبع، المملكة العربية السعودية">Yanbu, Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service" data-en="Service Needed" data-ar="الخدمة المطلوبة">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
+                                <option value="document" data-en="Document Translation" data-ar="ترجمة الوثائق">Document Translation</option>
+                                <option value="interpretation" data-en="Interpretation Services" data-ar="خدمات الترجمة الفورية">Interpretation Services</option>
+                                <option value="website" data-en="Website Localization" data-ar="توطين المواقع الإلكترونية">Website Localization</option>
+                                <option value="mobile" data-en="Mobile App Translation" data-ar="ترجمة التطبيقات">Mobile App Translation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-en="Modar Translation" data-ar="مدار للترجمة">Modar Translation</h4>
+                    <p data-en="Professional translation services in Yanbu, serving the Western Region of Saudi Arabia with excellence and precision." data-ar="خدمات ترجمة احترافية في ينبع، نخدم المنطقة الغربية في المملكة العربية السعودية بتميز ودقة.">Professional translation services in Yanbu, serving the Western Region of Saudi Arabia with excellence and precision.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h4>
+                    <p data-en="Email: AlihamadAlahmadi@gmail.com" data-ar="البريد الإلكتروني: AlihamadAlahmadi@gmail.com">Email: AlihamadAlahmadi@gmail.com</p>
+                    <p data-en="Phone: +966555609260" data-ar="الهاتف: +966555609260">Phone: +966555609260</p>
+                    <p data-en="Location: Yanbu, Saudi Arabia" data-ar="الموقع: ينبع، المملكة العربية السعودية">Location: Yanbu, Saudi Arabia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2025 Modar Translation. All rights reserved. | Ali Hamad Al-Ahmadi" data-ar="© 2025 مدار للترجمة. جميع الحقوق محفوظة. | علي حمد الأحمدي">&copy; 2025 Modar Translation. All rights reserved. | Ali Hamad Al-Ahmadi</p>
             </div>
         </div>
-
-        <div class="auth-content">
-            <!-- Login Form -->
-            <form class="auth-form active" id="loginForm" onsubmit="handleLogin(event)">
-                <div class="form-group">
-                    <label for="loginEmail" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
-                    <input type="email" id="loginEmail" name="email" required>
-                    <div class="form-icon">📧</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="loginPassword" data-en="Password" data-ar="كلمة المرور">Password</label>
-                    <input type="password" id="loginPassword" name="password" required>
-                    <div class="form-icon">🔒</div>
-                    <div class="password-toggle" onclick="togglePassword('loginPassword')">👁️</div>
-                </div>
-
-                <div class="remember-forgot">
-                    <label class="remember-me">
-                        <input type="checkbox" name="remember">
-                        <span data-en="Remember me" data-ar="تذكرني">Remember me</span>
-                    </label>
-                    <a href="#" class="forgot-password" data-en="Forgot Password?" data-ar="نسيت كلمة المرور؟">Forgot Password?</a>
-                </div>
-
-                <button type="submit" class="submit-btn" data-en="Login" data-ar="تسجيل الدخول">Login</button>
-
-                <div class="divider">
-                    <span data-en="Or continue with" data-ar="أو تابع مع">Or continue with</span>
-                </div>
-
-                <div class="social-login">
-                    <button type="button" class="social-btn google-btn" onclick="socialLogin('google')">
-                        <span>G</span>
-                        <span data-en="Google" data-ar="جوجل">Google</span>
-                    </button>
-                    <button type="button" class="social-btn facebook-btn" onclick="socialLogin('facebook')">
-                        <span>f</span>
-                        <span data-en="Facebook" data-ar="فيسبوك">Facebook</span>
-                    </button>
-                </div>
-            </form>
-
-            <!-- Register Form -->
-            <form class="auth-form" id="registerForm" onsubmit="handleRegister(event)">
-                <div class="form-group">
-                    <label for="registerName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
-                    <input type="text" id="registerName" name="name" required>
-                    <div class="form-icon">👤</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="registerEmail" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
-                    <input type="email" id="registerEmail" name="email" required>
-                    <div class="form-icon">📧</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="registerPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
-                    <input type="tel" id="registerPhone" name="phone" required>
-                    <div class="form-icon">📱</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="registerPassword" data-en="Password" data-ar="كلمة المرور">Password</label>
-                    <input type="password" id="registerPassword" name="password" required>
-                    <div class="form-icon">🔒</div>
-                    <div class="password-toggle" onclick="togglePassword('registerPassword')">👁️</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirmPassword" data-en="Confirm Password" data-ar="تأكيد كلمة المرور">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    <div class="form-icon">🔒</div>
-                    <div class="password-toggle" onclick="togglePassword('confirmPassword')">👁️</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="userType" data-en="Account Type" data-ar="نوع الحساب">Account Type</label>
-                    <select id="userType" name="userType" required>
-                        <option value="" data-en="Select account type" data-ar="اختر نوع الحساب">Select account type</option>
-                        <option value="client" data-en="Client" data-ar="عميل">Client</option>
-                        <option value="translator" data-en="Translator" data-ar="مترجم">Translator</option>
-                        <option value="business" data-en="Business" data-ar="شركة">Business</option>
-                    </select>
-                    <div class="form-icon">🏢</div>
-                </div>
-
-                <div class="remember-forgot">
-                    <label class="remember-me">
-                        <input type="checkbox" name="terms" required>
-                        <span data-en="I agree to Terms & Conditions" data-ar="أوافق على الشروط والأحكام">I agree to Terms & Conditions</span>
-                    </label>
-                </div>
-
-                <button type="submit" class="submit-btn" data-en="Create Account" data-ar="إنشاء حساب">Create Account</button>
-
-                <div class="divider">
-                    <span data-en="Or register with" data-ar="أو سجل مع">Or register with</span>
-                </div>
-
-                <div class="social-login">
-                    <button type="button" class="social-btn google-btn" onclick="socialLogin('google')">
-                        <span>G</span>
-                        <span data-en="Google" data-ar="جوجل">Google</span>
-                    </button>
-                    <button type="button" class="social-btn facebook-btn" onclick="socialLogin('facebook')">
-                        <span>f</span>
-                        <span data-en="Facebook" data-ar="فيسبوك">Facebook</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+    </footer>
 
     <script>
         let currentLang = 'en';
-        let currentTab = 'login';
 
         function switchLanguage(lang) {
             currentLang = lang;
@@ -625,153 +732,11 @@
             html.setAttribute('lang', lang);
             html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
             
-            // Update language buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
-            });
-            
             // Update text content
             elements.forEach(element => {
                 const text = element.getAttribute(`data-${lang}`);
                 if (text) {
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.placeholder = text;
-                    } else if (element.tagName === 'OPTION') {
-                        element.textContent = text;
                     } else {
                         element.textContent = text;
-                    }
-                }
-            });
-        }
-
-        function switchTab(tab) {
-            currentTab = tab;
-            
-            // Update tab buttons
-            document.querySelectorAll('.auth-tab').forEach((btn, index) => {
-                btn.classList.toggle('active', (tab === 'login' && index === 0) || (tab === 'register' && index === 1));
-            });
-            
-            // Update forms
-            document.querySelectorAll('.auth-form').forEach(form => {
-                form.classList.toggle('active', form.id === `${tab}Form`);
-            });
-        }
-
-        function togglePassword(inputId) {
-            const input = document.getElementById(inputId);
-            const toggle = input.nextElementSibling.nextElementSibling;
-            
-            if (input.type === 'password') {
-                input.type = 'text';
-                toggle.textContent = '🙈';
-            } else {
-                input.type = 'password';
-                toggle.textContent = '👁️';
-            }
-        }
-
-        function showMessage(type, message) {
-            const existingMessage = document.querySelector('.success-message, .error-message');
-            if (existingMessage) {
-                existingMessage.remove();
-            }
-            
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `${type}-message`;
-            messageDiv.textContent = message;
-            
-            const authContent = document.querySelector('.auth-content');
-            authContent.insertBefore(messageDiv, authContent.firstChild);
-            
-            setTimeout(() => {
-                messageDiv.remove();
-            }, 5000);
-        }
-
-        function handleLogin(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const email = formData.get('email');
-            const password = formData.get('password');
-            
-            // Simulate login process
-            setTimeout(() => {
-                if (email && password) {
-                    showMessage('success', currentLang === 'en' ? 'Login successful! Redirecting...' : 'تم تسجيل الدخول بنجاح! جارٍ التحويل...');
-                    
-                    // Simulate redirect
-                    setTimeout(() => {
-                        window.location.href = '#dashboard';
-                    }, 2000);
-                } else {
-                    showMessage('error', currentLang === 'en' ? 'Please fill in all fields' : 'يرجى ملء جميع الحقول');
-                }
-            }, 1000);
-        }
-
-        function handleRegister(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const password = formData.get('password');
-            const confirmPassword = formData.get('confirmPassword');
-            
-            if (password !== confirmPassword) {
-                showMessage('error', currentLang === 'en' ? 'Passwords do not match' : 'كلمات المرور غير متطابقة');
-                return;
-            }
-            
-            // Simulate registration process
-            setTimeout(() => {
-                showMessage('success', currentLang === 'en' ? 'Account created successfully! Please check your email for verification.' : 'تم إنشاء الحساب بنجاح! يرجى التحقق من بريدك الإلكتروني للتفعيل.');
-                
-                // Switch to login tab after successful registration
-                setTimeout(() => {
-                    switchTab('login');
-                }, 2000);
-            }, 1000);
-        }
-
-        function socialLogin(provider) {
-            showMessage('success', currentLang === 'en' ? 
-                `Connecting to ${provider}...` : 
-                `جارٍ الاتصال بـ ${provider === 'google' ? 'جوجل' : 'فيسبوك'}...`);
-            
-            // Simulate social login
-            setTimeout(() => {
-                showMessage('success', currentLang === 'en' ? 
-                    `${provider} login successful!` : 
-                    `تم تسجيل الدخول عبر ${provider === 'google' ? 'جوجل' : 'فيسبوك'} بنجاح!`);
-            }, 2000);
-        }
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add some interactive effects
-            const inputs = document.querySelectorAll('input, select');
-            inputs.forEach(input => {
-                input.addEventListener('focus', function() {
-                    this.parentElement.style.transform = 'translateY(-2px)';
-                });
-                
-                input.addEventListener('blur', function() {
-                    this.parentElement.style.transform = 'translateY(0)';
-                });
-            });
-            
-            // Add keyboard shortcuts
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' && e.ctrlKey) {
-                    const activeForm = document.querySelector('.auth-form.active');
-                    if (activeForm) {
-                        activeForm.querySelector('.submit-btn').click();
-                    }
-                }
-            });
-        });
-    </script>
-</body>
-</html>
