@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Arabic-English Translation Services | Bridging Languages & Cultures</title>
-    <meta name="description" content="Expert Arabic-English translation services with certified accuracy. Legal, medical, technical, and business translations by native speakers.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <title>Modar Translation - Login</title>
     <style>
         * {
             margin: 0;
@@ -13,1115 +11,767 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #2c5f2d;
-            --secondary-color: #97bc62;
-            --accent-color: #d4a574;
-            --text-dark: #1a1a1a;
-            --text-light: #6b7280;
-            --white: #ffffff;
-            --background: #f8fafc;
-            --border: #e2e8f0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--background);
-            font-size: 16px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .logo::before {
-            content: '🌐';
-            margin-right: 0.5rem;
-            font-size: 1.8rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-        }
-
-        .nav-cta:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
+            justify-content: center;
+            padding: 20px;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
+        body::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,0 1000,300 1000,1000 0,700"/></svg>');
-            pointer-events: none;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="rgba(255,255,255,0.05)"><circle cx="200" cy="200" r="100"/><circle cx="800" cy="300" r="150"/><circle cx="400" cy="800" r="120"/><circle cx="900" cy="700" r="80"/></svg>');
+            background-size: cover;
+            animation: float 20s ease-in-out infinite;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .hero .arabic-text {
-            font-family: 'Amiri', serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-            direction: rtl;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            background: var(--accent-color);
-            color: var(--text-dark);
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Trust Indicators */
-        .trust-indicators {
-            background: white;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .trust-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .trust-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .trust-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .section-alt {
-            background: var(--background);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid var(--border);
-            position: relative;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-features li {
-            padding: 0.3rem 0;
-            color: var(--text-light);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .service-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-        }
-
-        .about-text h3 {
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .credentials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .credential-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
+        .auth-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .specializations {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .specialization {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid var(--accent-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .specialization h4 {
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .specialization p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Process Section */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 450px;
             position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .process-step {
-            text-align: center;
+        .auth-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
             padding: 2rem;
+            text-align: center;
             position: relative;
         }
 
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
+        .auth-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,100 1000,0 1000,100"/></svg>');
+            background-size: cover;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-tabs {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1rem;
+            background: rgba(0, 0, 0, 0.1);
+            margin: 0 -2rem -2rem -2rem;
+            position: relative;
+            z-index: 2;
         }
 
-        .process-step h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .process-step p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Contact Form */
-        .contact-section {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .contact-section .section-header h2,
-        .contact-section .section-header p {
-            color: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-info {
-            padding: 2rem 0;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
+        .auth-tab {
+            flex: 1;
             padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .auth-tab.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-tab:hover {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            color: white;
         }
 
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--text-dark);
+        .auth-content {
+            padding: 2.5rem;
         }
 
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .form-group {
             margin-bottom: 1.5rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            position: relative;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
         }
 
         .form-group input,
-        .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid var(--border);
-            border-radius: 10px;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
             font-size: 1rem;
             transition: all 0.3s ease;
+            font-family: inherit;
             background: white;
-            color: var(--text-dark);
         }
 
         .form-group input:focus,
-        .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.1);
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
+        .form-icon {
+            position: absolute;
+            left: 1rem;
+            top: 2.2rem;
+            color: #666;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .form-group input:focus + .form-icon {
+            color: #667eea;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 1rem;
+            top: 2.2rem;
+            cursor: pointer;
+            color: #666;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .password-toggle:hover {
+            color: #667eea;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+            accent-color: #667eea;
+        }
+
+        .forgot-password {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password:hover {
+            color: #5a67d8;
+            text-decoration: underline;
         }
 
         .submit-btn {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 12px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
-            box-shadow: 0 4px 15px rgba(44, 95, 45, 0.4);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
         }
 
         .submit-btn:hover {
-            background: var(--secondary-color);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(44, 95, 45, 0.6);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
         }
 
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 0 1rem;
+        .submit-btn:active {
+            transform: translateY(0);
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #cbd5e1;
-            text-decoration: none;
-            line-height: 1.7;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #374151;
-            padding-top: 2rem;
+        .divider {
             text-align: center;
-            color: #9ca3af;
+            margin: 2rem 0;
+            position: relative;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .google-btn {
+            color: #db4437;
+        }
+
+        .google-btn:hover {
+            border-color: #db4437;
+            color: #db4437;
+        }
+
+        .facebook-btn {
+            color: #4267B2;
+        }
+
+        .facebook-btn:hover {
+            border-color: #4267B2;
+            color: #4267B2;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #f5c6cb;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .back-to-site {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .back-to-site:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 1000;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+
+        /* RTL Styles */
+        [dir="rtl"] {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        [dir="rtl"] .form-group input,
+        [dir="rtl"] .form-group select {
+            padding: 1rem 3rem 1rem 1rem;
+        }
+
+        [dir="rtl"] .form-icon {
+            left: auto;
+            right: 1rem;
+        }
+
+        [dir="rtl"] .password-toggle {
+            right: auto;
+            left: 1rem;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 2rem;
+        }
+
+        [dir="rtl"] .back-to-site {
+            left: auto;
+            right: 2rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .auth-container {
+                margin: 1rem;
+                border-radius: 20px;
             }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .arabic-text {
-                font-size: 1.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .services-grid,
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+            .auth-header {
+                padding: 1.5rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .auth-content {
+                padding: 1.5rem;
             }
-        }
 
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
+            .logo {
+                font-size: 1.8rem;
+            }
 
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
+            .back-to-site,
+            .language-switcher {
+                top: 1rem;
+            }
+
+            .social-login {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">ArabLing Pro</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Get Quote</a>
-        </nav>
-    </header>
+    <a href="#" class="back-to-site" data-en="← Back to Site" data-ar="← العودة للموقع">← Back to Site</a>
+    
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
+    </div>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="arabic-text">الترجمة المهنية بين العربية والإنجليزية</div>
-                    <h1>Professional Arabic-English Translation Services</h1>
-                    <p>Bridging cultures through precise, culturally-aware translations. Native expertise in both languages with specialized knowledge across legal, medical, technical, and business domains.</p>
-                    <a href="#contact" class="hero-cta">
-                        <span>Get Your Free Quote</span>
-                        <span>→</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="trust-indicators">
-            <div class="container">
-                <div class="trust-grid">
-                    <div class="trust-item">
-                        <div class="trust-number">500+</div>
-                        <div class="trust-label">Projects Completed</div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-number">50+</div>
-                        <div class="trust-label">Corporate Clients</div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-number">99.8%</div>
-                        <div class="trust-label">Accuracy Rate</div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-number">24hr</div>
-                        <div class="trust-label">Average Turnaround</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Specialized Translation Services</h2>
-                    <p>Comprehensive Arabic-English translation solutions tailored to your specific industry needs with certified quality and cultural precision.</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">⚖️</div>
-                        <h3>Legal Translation</h3>
-                        <p>Certified legal document translation for contracts, court documents, certificates, and legal correspondence with guaranteed accuracy.</p>
-                        <ul class="service-features">
-                            <li>Birth & Marriage Certificates</li>
-                            <li>Legal Contracts & Agreements</li>
-                            <li>Court Documents & Judgments</li>
-                            <li>Immigration Documents</li>
-                            <li>Notarized Translations</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">🏥</div>
-                        <h3>Medical Translation</h3>
-                        <p>Specialized medical document translation ensuring precision in terminology and compliance with healthcare standards.</p>
-                        <ul class="service-features">
-                            <li>Medical Records & Reports</li>
-                            <li>Pharmaceutical Documentation</li>
-                            <li>Research Papers & Studies</li>
-                            <li>Patient Information Materials</li>
-                            <li>Clinical Trial Documentation</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">💼</div>
-                        <h3>Business Translation</h3>
-                        <p>Professional business document translation for companies expanding between Arabic and English markets.</p>
-                        <ul class="service-features">
-                            <li>Corporate Communications</li>
-                            <li>Financial Reports & Statements</li>
-                            <li>Marketing Materials</li>
-                            <li>Business Proposals</li>
-                            <li>Employee Handbooks</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">🔧</div>
-                        <h3>Technical Translation</h3>
-                        <p>Precise technical documentation translation for engineering, IT, and specialized industrial applications.</p>
-                        <ul class="service-features">
-                            <li>Technical Manuals & Guides</li>
-                            <li>Software Documentation</li>
-                            <li>Engineering Specifications</li>
-                            <li>Safety Procedures</li>
-                            <li>Product Catalogs</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">🎓</div>
-                        <h3>Academic Translation</h3>
-                        <p>Scholarly and educational document translation maintaining academic integrity and specialized terminology.</p>
-                        <ul class="service-features">
-                            <li>Research Papers & Theses</li>
-                            <li>Educational Materials</li>
-                            <li>Academic Transcripts</li>
-                            <li>Conference Presentations</li>
-                            <li>Scientific Publications</li>
-                        </ul>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">🌐</div>
-                        <h3>Website Localization</h3>
-                        <p>Complete website translation and cultural adaptation for Arabic and English-speaking markets.</p>
-                        <ul class="service-features">
-                            <li>Website Content Translation</li>
-                            <li>E-commerce Platforms</li>
-                            <li>Mobile App Localization</li>
-                            <li>SEO-Optimized Content</li>
-                            <li>Cultural Adaptation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section section-alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why Choose Our Translation Services?</h2>
-                    <p>Professional expertise backed by years of experience and deep cultural understanding of both Arabic and English languages.</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Native Bilingual Expertise</h3>
-                        <p>As a native speaker of both Arabic and English, I bring authentic cultural understanding and linguistic precision to every translation project. My deep knowledge of both languages ensures that your message resonates perfectly with your target audience.</p>
-                        
-                        <h3>Specialized Industry Knowledge</h3>
-                        <p>Years of experience across multiple industries have given me specialized knowledge in legal, medical, technical, and business terminology. This expertise ensures accurate, contextually appropriate translations that meet industry standards.</p>
-                        
-                        <div class="credentials">
-                            <span class="credential-badge">Certified Translator</span>
-                            <span class="credential-badge">10+ Years Experience</span>
-                            <span class="credential-badge">Native Arabic Speaker</span>
-                            <span class="credential-badge">Native English Speaker</span>
-                            <span class="credential-badge">ISO 9001 Certified</span>
-                        </div>
-                    </div>
-                    <div class="specializations">
-                        <div class="specialization">
-                            <h4>Cultural Sensitivity</h4>
-                            <p>Understanding cultural nuances and context to ensure your message is culturally appropriate and effective.</p>
-                        </div>
-                        <div class="specialization">
-                            <h4>Quality Assurance</h4>
-                            <p>Rigorous quality control process including multiple reviews and proofreading for error-free translations.</p>
-                        </div>
-                        <div class="specialization">
-                            <h4>Confidentiality</h4>
-                            <p>Strict confidentiality protocols and NDAs to protect your sensitive information and documents.</p>
-                        </div>
-                        <div class="specialization">
-                            <h4>Fast Turnaround</h4>
-                            <p>Efficient workflow management to deliver high-quality translations within your deadlines.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="process" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Translation Process</h2>
-                    <p>A streamlined, professional approach ensuring accuracy, quality, and timely delivery for every project.</p>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">1</div>
-                        <h3>Project Analysis</h3>
-                        <p>We analyze your document, determine complexity, and provide a detailed quote with timeline and specific requirements.</p>
-                    </div>
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">2</div>
-                        <h3>Translation</h3>
-                        <p>Expert translation focusing on accuracy, cultural appropriateness, and maintaining the original tone and intent.</p>
-                    </div>
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">3</div>
-                        <h3>Quality Review</h3>
-                        <p>Comprehensive review and proofreading to ensure linguistic accuracy, consistency, and cultural appropriateness.</p>
-                    </div>
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">4</div>
-                        <h3>Delivery</h3>
-                        <p>Final delivery in your preferred format with quality assurance certificate and revision support if needed.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get Your Professional Translation Quote</h2>
-                    <p>Ready to bridge languages and cultures? Contact us for a free, detailed quote tailored to your specific needs.</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@arablingpro.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+966 (0) 12 345 6789</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Medina, Saudi Arabia</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🕐</div>
-                            <div>
-                                <h4>Response Time</h4>
-                                <p>Within 2 hours during business hours</p>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact-form" onsubmit="handleSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company/Organization</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="direction">Translation Direction *</label>
-                            <select id="direction" name="direction" required>
-                                <option value="">Select translation direction</option>
-                                <option value="ar-en">Arabic to English</option>
-                                <option value="en-ar">English to Arabic</option>
-                                <option value="both">Both directions (multiple documents)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Type *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select service type</option>
-                                <option value="legal">Legal Translation</option>
-                                <option value="medical">Medical Translation</option>
-                                <option value="business">Business Translation</option>
-                                <option value="technical">Technical Translation</option>
-                                <option value="academic">Academic Translation</option>
-                                <option value="website">Website Localization</option>
-                                <option value="certified">Certified Translation</option>
-                                <option value="other">Other (please specify)</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="wordcount">Estimated Word Count</label>
-                                <select id="wordcount" name="wordcount">
-                                    <option value="">Select word count</option>
-                                    <option value="0-500">0-500 words</option>
-                                    <option value="500-1000">500-1,000 words</option>
-                                    <option value="1000-2500">1,000-2,500 words</option>
-                                    <option value="2500-5000">2,500-5,000 words</option>
-                                    <option value="5000+">5,000+ words</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="deadline">Required Deadline</label>
-                                <input type="date" id="deadline" name="deadline">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" name="message" placeholder="Please provide details about your translation project including:
-• Type of document(s)
-• Subject matter or industry
-• Any specific requirements
-• Certification needs
-• Special formatting requirements
-• Additional context that might be helpful" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" required>
-                                I agree to the <a href="#" style="color: var(--primary-color);">Terms of Service</a> and <a href="#" style="color: var(--primary-color);">Privacy Policy</a>
-                            </label>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Quote Request</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ArabLing Pro</h3>
-                    <p>Professional Arabic-English translation services bridging cultures and languages with precision and expertise.</p>
-                    <p style="margin-top: 1rem; font-family: 'Amiri', serif; direction: rtl;">خدمات الترجمة المهنية بين العربية والإنجليزية</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Our Services</h3>
-                    <p><a href="#services">Legal Translation</a></p>
-                    <p><a href="#services">Medical Translation</a></p>
-                    <p><a href="#services">Business Translation</a></p>
-                    <p><a href="#services">Technical Translation</a></p>
-                    <p><a href="#services">Academic Translation</a></p>
-                    <p><a href="#services">Website Localization</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Information</h3>
-                    <p>📧 info@arablingpro.com</p>
-                    <p>📞 +966 (0) 12 345 6789</p>
-                    <p>📍 Medina, Saudi Arabia</p>
-                    <p>🕐 Available 24/7 for urgent projects</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quality Assurance</h3>
-                    <p>✓ Native Speaker Accuracy</p>
-                    <p>✓ Cultural Sensitivity</p>
-                    <p>✓ Industry Expertise</p>
-                    <p>✓ Confidentiality Guaranteed</p>
-                    <p>✓ Fast Turnaround</p>
-                    <p>✓ Competitive Pricing</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ArabLing Pro. All rights reserved. | Professional Arabic-English Translation Services</p>
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="logo" data-en="Modar Translation" data-ar="مدار للترجمة">Modar Translation</div>
+            <p class="auth-subtitle" data-en="Professional Translation Services" data-ar="خدمات ترجمة احترافية">Professional Translation Services</p>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="switchTab('login')" data-en="Login" data-ar="تسجيل الدخول">Login</button>
+                <button class="auth-tab" onclick="switchTab('register')" data-en="Register" data-ar="إنشاء حساب">Register</button>
             </div>
         </div>
-    </footer>
+
+        <div class="auth-content">
+            <!-- Login Form -->
+            <form class="auth-form active" id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginEmail" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                    <div class="form-icon">📧</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword" data-en="Password" data-ar="كلمة المرور">Password</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                    <div class="form-icon">🔒</div>
+                    <div class="password-toggle" onclick="togglePassword('loginPassword')">👁️</div>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span data-en="Remember me" data-ar="تذكرني">Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password" data-en="Forgot Password?" data-ar="نسيت كلمة المرور؟">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn" data-en="Login" data-ar="تسجيل الدخول">Login</button>
+
+                <div class="divider">
+                    <span data-en="Or continue with" data-ar="أو تابع مع">Or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn" onclick="socialLogin('google')">
+                        <span>G</span>
+                        <span data-en="Google" data-ar="جوجل">Google</span>
+                    </button>
+                    <button type="button" class="social-btn facebook-btn" onclick="socialLogin('facebook')">
+                        <span>f</span>
+                        <span data-en="Facebook" data-ar="فيسبوك">Facebook</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form class="auth-form" id="registerForm" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="registerName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                    <input type="text" id="registerName" name="name" required>
+                    <div class="form-icon">👤</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                    <div class="form-icon">📧</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                    <input type="tel" id="registerPhone" name="phone" required>
+                    <div class="form-icon">📱</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword" data-en="Password" data-ar="كلمة المرور">Password</label>
+                    <input type="password" id="registerPassword" name="password" required>
+                    <div class="form-icon">🔒</div>
+                    <div class="password-toggle" onclick="togglePassword('registerPassword')">👁️</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" data-en="Confirm Password" data-ar="تأكيد كلمة المرور">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div class="form-icon">🔒</div>
+                    <div class="password-toggle" onclick="togglePassword('confirmPassword')">👁️</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="userType" data-en="Account Type" data-ar="نوع الحساب">Account Type</label>
+                    <select id="userType" name="userType" required>
+                        <option value="" data-en="Select account type" data-ar="اختر نوع الحساب">Select account type</option>
+                        <option value="client" data-en="Client" data-ar="عميل">Client</option>
+                        <option value="translator" data-en="Translator" data-ar="مترجم">Translator</option>
+                        <option value="business" data-en="Business" data-ar="شركة">Business</option>
+                    </select>
+                    <div class="form-icon">🏢</div>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" name="terms" required>
+                        <span data-en="I agree to Terms & Conditions" data-ar="أوافق على الشروط والأحكام">I agree to Terms & Conditions</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn" data-en="Create Account" data-ar="إنشاء حساب">Create Account</button>
+
+                <div class="divider">
+                    <span data-en="Or register with" data-ar="أو سجل مع">Or register with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn" onclick="socialLogin('google')">
+                        <span>G</span>
+                        <span data-en="Google" data-ar="جوجل">Google</span>
+                    </button>
+                    <button type="button" class="social-btn facebook-btn" onclick="socialLogin('facebook')">
+                        <span>f</span>
+                        <span data-en="Facebook" data-ar="فيسبوك">Facebook</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script>
-        // Form submission handler
-        function handleSubmit(event) {
+        let currentLang = 'en';
+        let currentTab = 'login';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const html = document.documentElement;
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+            
+            // Update HTML attributes
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+            });
+            
+            // Update text content
+            elements.forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = text;
+                    } else if (element.tagName === 'OPTION') {
+                        element.textContent = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Update tab buttons
+            document.querySelectorAll('.auth-tab').forEach((btn, index) => {
+                btn.classList.toggle('active', (tab === 'login' && index === 0) || (tab === 'register' && index === 1));
+            });
+            
+            // Update forms
+            document.querySelectorAll('.auth-form').forEach(form => {
+                form.classList.toggle('active', form.id === `${tab}Form`);
+            });
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const toggle = input.nextElementSibling.nextElementSibling;
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggle.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                toggle.textContent = '👁️';
+            }
+        }
+
+        function showMessage(type, message) {
+            const existingMessage = document.querySelector('.success-message, .error-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `${type}-message`;
+            messageDiv.textContent = message;
+            
+            const authContent = document.querySelector('.auth-content');
+            authContent.insertBefore(messageDiv, authContent.firstChild);
+            
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+
+        function handleLogin(event) {
             event.preventDefault();
             
-            const form = event.target;
-            const formData = new FormData(form);
+            const formData = new FormData(event.target);
+            const email = formData.get('email');
+            const password = formData.get('password');
             
-            // Create a summary of the request
-            const direction = formData.get('direction');
-            const service = formData.get('service');
-            const wordcount = formData.get('wordcount');
-            const deadline = formData.get('deadline');
-            
-            let summary = `Thank you for your translation request!\n\nRequest Summary:\n`;
-            summary += `• Direction: ${direction}\n`;
-            summary += `• Service: ${service}\n`;
-            if (wordcount) summary += `• Word Count: ${wordcount}\n`;
-            if (deadline) summary += `• Deadline: ${deadline}\n`;
-            summary += `\nWe will review your request and send you a detailed quote within 2 hours during business hours. For urgent projects, please call us directly.\n\nThank you for choosing ArabLing Pro!`;
-            
-            alert(summary);
-            
-            // Reset form
-            form.reset();
+            // Simulate login process
+            setTimeout(() => {
+                if (email && password) {
+                    showMessage('success', currentLang === 'en' ? 'Login successful! Redirecting...' : 'تم تسجيل الدخول بنجاح! جارٍ التحويل...');
+                    
+                    // Simulate redirect
+                    setTimeout(() => {
+                        window.location.href = '#dashboard';
+                    }, 2000);
+                } else {
+                    showMessage('error', currentLang === 'en' ? 'Please fill in all fields' : 'يرجى ملء جميع الحقول');
+                }
+            }, 1000);
         }
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        function handleRegister(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const password = formData.get('password');
+            const confirmPassword = formData.get('confirmPassword');
+            
+            if (password !== confirmPassword) {
+                showMessage('error', currentLang === 'en' ? 'Passwords do not match' : 'كلمات المرور غير متطابقة');
+                return;
+            }
+            
+            // Simulate registration process
+            setTimeout(() => {
+                showMessage('success', currentLang === 'en' ? 'Account created successfully! Please check your email for verification.' : 'تم إنشاء الحساب بنجاح! يرجى التحقق من بريدك الإلكتروني للتفعيل.');
+                
+                // Switch to login tab after successful registration
+                setTimeout(() => {
+                    switchTab('login');
+                }, 2000);
+            }, 1000);
+        }
+
+        function socialLogin(provider) {
+            showMessage('success', currentLang === 'en' ? 
+                `Connecting to ${provider}...` : 
+                `جارٍ الاتصال بـ ${provider === 'google' ? 'جوجل' : 'فيسبوك'}...`);
+            
+            // Simulate social login
+            setTimeout(() => {
+                showMessage('success', currentLang === 'en' ? 
+                    `${provider} login successful!` : 
+                    `تم تسجيل الدخول عبر ${provider === 'google' ? 'جوجل' : 'فيسبوك'} بنجاح!`);
+            }, 2000);
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some interactive effects
+            const inputs = document.querySelectorAll('input, select');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'translateY(-2px)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Add keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && e.ctrlKey) {
+                    const activeForm = document.querySelector('.auth-form.active');
+                    if (activeForm) {
+                        activeForm.querySelector('.submit-btn').click();
+                    }
                 }
             });
         });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = 'var(--shadow)';
-            }
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add mobile menu toggle (simple version)
-        const navLinks = document.querySelector('.nav-links');
-        const navToggle = document.createElement('button');
-        navToggle.innerHTML = '☰';
-        navToggle.style.cssText = `
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--primary-color);
-        `;
-        
-        document.querySelector('nav').appendChild(navToggle);
-        
-        navToggle.addEventListener('click', function() {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        // Show mobile menu button on small screens
-        function handleResize() {
-            if (window.innerWidth <= 768) {
-                navToggle.style.display = 'block';
-                navLinks.style.display = 'none';
-            } else {
-                navToggle.style.display = 'none';
-                navLinks.style.display = 'flex';
-            }
-        }
-        
-        window.addEventListener('resize', handleResize);
-        handleResize(); // Initial call
-
-        // Auto-fill today's date for deadline minimum
-        document.getElementById('deadline').min = new Date().toISOString().split('T')[0];
     </script>
 </body>
 </html>
